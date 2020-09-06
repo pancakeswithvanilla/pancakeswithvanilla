@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" href="background_styles.css">
+      <link rel="stylesheet" href="./style.css">
+      <link href="https://fonts.googleapis.com/css2?family=Kufam:wght@600&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+      <script src="./app.js" defer></script>
+      <title>Luxury Hotel in Santorini</title>
+      <style>* {
+        box-sizing: border-box;
+      }
+      
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      
+      .bg-img {
+      
+        background-image: url("img/pexels-pixabay-221532.jpg");
+       height:100vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+      }
+      .container {
+        position: absolute;
+        margin: 0px;
+        width:100%;
+      
+      }
+      
+      .navbar {
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #333;
+        color: white;
+        text-transform:uppercase;
+        padding:1rem;
+        font-family: 'Roboto', sans-serif;
+      }
+      
+      .brand-title {
+        font-size: 2rem;
+        margin: .5rem;
+        font-family: 'Kufam', cursive;
+        position:relative;
+      
+      }
+      #santorini
+      {
+        font-family: 'Lobster', cursive;
+        font-size:1.7rem;
+        position:absolute;
+        top:30px;
+        left:30px;
+        
+      }
+      .booking
+      {
+        position:relative;
+        top:100px;
+        background-color:black;
+        border-color:white;
+        border-style: solid;
+        border-width:thick;
+      
+      }
+      .booking a{
+        text-decoration:none;
+        font-family:'Lobster',sans-serif;
+      font-size:40px;
+      color:white;
+      }
+      h2
+      {
+        position:relative;
+        font-size:50px;
+       color:white;
+      background-color:rgba(67, 79, 89, 0.383);
+      font-family:'Roboto',sans-serif;
+      text-align:center;
+      display: block;
+          margin-left: auto;
+          margin-right: auto;
+       width:30%;
+        top:300px;
+      }
+      .navbar-links {
+        height: 100%;
+      }
+      
+      .navbar-links ul {
+        display: flex;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .navbar-links li {
+        list-style: none;
+      }
+      
+      .navbar-links li a {
+        display: block;
+        text-decoration: none;
+        font-weight:bold;
+        font-size:20px;
+        color: white;
+        padding: 1rem;
+      }
+      
+      .navbar-links li:hover {
+        background-color: #555;
+      }
+      
+      .toggle-button {
+        position: absolute;
+        top: .75rem;
+        right: 1rem;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height:21px;
+      }
+      
+      .toggle-button .bar {
+        height: 3px;
+        width: 100%;
+        background-color: white;
+        border-radius: 10px;
+      }
+      
+      
+      @media (max-width: 800px) {
+        .navbar {
+            flex-direction: column;
+            align-items: center;
+        }
+      
+        .toggle-button {
+            display: flex;
+        }
+      
+        .navbar-links {
+            display: none;
+            width: 100%;
+        }
+      
+        .navbar-links ul {
+            width: 100%;
+            flex-direction: column;
+        }
+      
+        .navbar-links ul li {
+            text-align: center;
+        }
+      
+        .navbar-links ul li a {
+            padding: .5rem 1rem;
+        }
+      
+        .navbar-links.active {
+            display: flex;
+        }
+        
+        
+      }</style>
+      <script>
+        const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+toggleButton.addEventListener('click', () => {
+  navbarLinks.classList.toggle('active')
+}) 
+      </script>
+    </head>
+    <body>
+      <div class="bg-img">
+        <div class="container">
+      <nav class="navbar">
+        <div class="brand-title">Canaves Oia <div id="santorini">Santorini</div></div>
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+          <ul>
+            <li><a href="https://canaves.com/about/" target="_blank">About</a></li>
+            <li><a href="https://canaves.com/experiences/" target="_blank">Experiences</a></li>
+            <li><a href="https://canaves.com/spa-santorini/" target="_blank">Wellness</a></li>
+            <li><a href="https://canaves.com/contact/" target="_blank">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <h2>Santorini, one of God's greatest gifts for humanity, but don't believe us... Try it out for yourself!
+      <button class="booking">
+        <a href="https://canaves.reserve-online.net/?_ga=2.268670455.783342847.1599312765-2029892692.1599312765&_gac=1.157049545.1599422211.CjwKCAjwkdL6BRAREiwA-kiczFtQyvZp4RtxFTK-dCvCMZowRGtvD70rE9ys1ft_9Y0izAwp-_YeWxoCg-IQAvD_BwE" target="_blank">Book now!</a></button>
+    </h2>
+    </div>
+  </div>
+    </body>
+</html> 
